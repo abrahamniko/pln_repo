@@ -7,10 +7,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Beranda<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="dashboard">Beranda<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Rayon<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="rayon">Rayon<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">User<span class="sr-only">(current)</span></a>
