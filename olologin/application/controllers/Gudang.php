@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Rayon extends CI_Controller {
+class Gudang extends CI_Controller {
 
 	function __construct()
 	{
@@ -13,14 +13,14 @@ class Rayon extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Rayon Content';
+		$data['title'] = 'Gudang Content';
 		$this->load->view('css');
 		$this->load->view('header');
-		$this->load->view('rayon',$data);
+		$this->load->view('gudang',$data);
 		$this->load->view('footer');
 	}
 
 }
 
-/* End of file Rayon.php */
-/* Location: ./application/controllers/Rayon.php */
+/* End of file Gudang.php */
+/* Location: ./application/controllers/Gudang.php */

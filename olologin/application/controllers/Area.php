@@ -17,5 +17,6 @@ class Area extends CI_Controller {
 		$this->load->view('css');
 		$this->load->view('header');
 		$this->load->view('area',$data);
+		$this->load->view('footer');
 	}
 }

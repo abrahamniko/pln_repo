@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Rayon Content</title>
+	<title><?= $title ?></title>
 </head>
 <body>
-
+	rayon
 </body>
 </html>

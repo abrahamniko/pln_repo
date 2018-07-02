@@ -6,21 +6,22 @@ class Login extends CI_Controller
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model('Model_user');
+		$this->load->model('Model_login');
 	}
 
 	public function index()
 	{
-		$this->load->view('login');
+		$data['title'] = 'Area Content';
+		$this->load->view('css');
+		$this->load->view('login',$data);
 	}
 
 	public function var_login(){
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
-		echo "U =".$username."P= ".$password; 
 
-		$ceklogin = $this->Model_user->cek_user($username,md5($password));
-
+		$ceklogin = $this->Model_login->cek_user($username,md5($password));
+		
 		if($ceklogin){
 			foreach ($ceklogin as $row) {			
 				$this->session->set_userdata('username', $row->username);

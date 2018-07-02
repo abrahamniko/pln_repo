@@ -13,7 +13,11 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('user');
+		$data['title'] = 'User Content';
+		$this->load->view('css');
+		$this->load->view('header');
+		$this->load->view('user',$data);
+		$this->load->view('footer');
 	}
 
 }
