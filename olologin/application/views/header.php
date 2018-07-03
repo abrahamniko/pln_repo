@@ -1,8 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 bg-white rounded">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <h2>SI OLO</h2>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -56,6 +53,7 @@
         <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i>  Grafik</a>
       </li>
     </ul>
+  </div>
 
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item dropdown active">
