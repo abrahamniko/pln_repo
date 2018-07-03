@@ -11,7 +11,7 @@ class Login extends CI_Controller
 
 	public function index()
 	{
-		$data['title'] = 'Login';
+		$data['title'] = 'Area Content';
 		$this->load->view('css');
 		$this->load->view('login',$data);
 	}

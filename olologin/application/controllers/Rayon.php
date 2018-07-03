@@ -17,6 +17,7 @@ class Rayon extends CI_Controller {
 		$this->load->view('css');
 		$this->load->view('header');
 		$this->load->view('rayon',$data);
+		$this->load->view('show_rayon');
 		$this->load->view('footer');
 	}
 
