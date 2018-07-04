@@ -8,10 +8,10 @@
       <div class="card-body">
         <form>
 		  <div class="form-row">
-		      <div class="form-group form-group col-md-6">
+		      <div class="form-group col-md-6">
 			    <label for="exampleFormControlSelect1">ID Area*</label >
 			    <select class="form-control" id="exampleFormControlSelect1">
-			      <option>Pilih Area</option>
+			      <option>-</option>
 			      <option>2</option>
 			      <option>3</option>
 			      <option>4</option>
@@ -20,24 +20,24 @@
 			  </div>
 		    <div class="form-group col-md-6">
 		      <label for="inputPassword4">ID Rayon*</label>
-		      <input type="text" class="form-control" id="inputPassword4" placeholder="Masukkan Nama">
+		      <input type="text" class="form-control" id="inputPassword4" placeholder="-">
 		    </div>
 		  </div>
 		  <div class="form-row">
 			  <div class="form-group col-md-6">
 			    <label for="inputAddress">Nama*</label>
-			    <input type="text" class="form-control" id="inputAddress" placeholder="Masukkan Alamat">
+			    <input type="text" class="form-control" id="inputAddress" placeholder="-">
 			  </div>
 			  <div class="form-group col-md-6">
 			    <label for="inputAddress">Alamat*</label>
-			    <input type="text" class="form-control" id="inputAddress" placeholder="Masukkan Alamat">
+			    <input type="text" class="form-control" id="inputAddress" placeholder="-">
 			  </div>
 		  </div>
 		</form>
       </div>
 	  <div class="card-footer text-muted text-center">
-	   <button type="button" class="btn btn-primary">Simpan</button>
-	   <button type="button" class="btn btn-danger">Reset</button>
+	   <button type="submit" class="btn btn-primary">Simpan</button>
+	   <button type="reset" class="btn btn-danger">Reset</button>
 	  </div>
     </div>
   </div>

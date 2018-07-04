@@ -7,7 +7,7 @@
       <img class="align-self-start mr-3" src="<?=base_url("assets/images/pln.png") ?>" style="width: 80px">
       <div class="media-body">
         <h1 class="mt-0 text-white">PT. PLN (PERSERO) KANTOR DISTRIBUSI JAWA TIMUR</h1>
-        <p class="text-white">Jalan Embong Trengguli No.19-21, Embong Kaliasin, Genteng, Embong Kaliasin, Genteng, Kota SBY, Jawa Timur 60271</p>
+        <p class="text-white">Jalan Embong Trengguli No.19-21, Embong Kaliasin, Genteng, Embong Kaliasin, Genteng, Kota SBY, Jawa Timur 60271<br>No Telp (031) 5340651</p>
       </div>
     </div> <br>
     <div class="card">

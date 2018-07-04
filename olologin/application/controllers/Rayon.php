@@ -6,7 +6,7 @@ class Rayon extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		if($this->session->userdata("akses")==false) {
+		if($this->session->userdata('akses')==false) {
             redirect('login');
         }
 	}

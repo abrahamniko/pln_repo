@@ -1,26 +1,32 @@
+<style type="text/css" media="screen">
+  li .nav-link:hover{
+    font-weight: bold;
+  }
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">
+    <img src="<?php echo base_url("assets/images/pln.png")?>" style="height: 7%;" class="d-inline-block align-top" alt="">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo site_url('dashboard')?>"><i class="fas fa-tachometer-alt"></i> Beranda</a>
+        <a class="nav-link" href="<?php echo site_url('dashboard')?>">Beranda</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo site_url('area')?>"><i class="fas fa-map-marked-alt"></i> Area</a>
+        <a class="nav-link" href="<?php echo site_url('area')?>">Area</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo site_url('rayon')?>"><i class="fas fa-map-marker-alt"></i> Rayon</a>
+        <a class="nav-link" href="<?php echo site_url('rayon')?>">Rayon</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo site_url('user')?>"><i class="fas fa-user"></i> User</a>
+        <a class="nav-link" href="<?php echo site_url('user')?>">User</a>
       </li>
       <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fas fa-hotel"></i> Aset
-        </a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aset</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="<?php echo site_url('tanah')?>">Tanah</a>
           <a class="dropdown-item" href="<?php echo site_url('gudang')?>">Gudang</a>
@@ -29,8 +35,7 @@
         </div>
       </li>
       <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <i class="fas fa-clipboard-list"></i> Status
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Status
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Status Kepemilikan</a>
@@ -46,13 +51,13 @@
         </div>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fas fa-building"></i> Pengajuan Proyek</a>
+        <a class="nav-link" href="#">Pengajuan Proyek</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fas fa-book"></i> Rekap</a>
+        <a class="nav-link" href="#">Rekap</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i>  Grafik</a>
+        <a class="nav-link" href="#">Grafik</a>
       </li>
     </ul>
   </div>
@@ -72,3 +77,4 @@
       </ul>
   </div>
 </nav>
+<br>
