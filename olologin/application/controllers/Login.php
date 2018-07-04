@@ -25,10 +25,11 @@ class Login extends CI_Controller
 		if($ceklogin){
 			foreach ($ceklogin as $row) {			
 				$this->session->set_userdata('username', $row->username);
-				$this->session->set_userdata('level', $row->level);
+				$this->session->set_userdata('level', $row->jabatan);
+				$this->session->set_userdata('area', $row->id_area);
 				$this->session->set_userdata('akses',true);
 
-				if($this->session->userdata('level')=="Admin"or"Distribusi"or"Area"){
+				if($this->session->userdata('level')=="admin"or"distribusi"or"area"or"aset"){
 					redirect('dashboard');	
 				}
 			}

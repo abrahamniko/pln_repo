@@ -16,22 +16,19 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>Edinburgh</td>
-                  <td>61</td>
-                  <td>2011/04/25</td>
-                  <td>$320,800</td>
-                </tr>
-                <tr>
-                  <td>Garrett Winters</td>
-                  <td>Accountant</td>
-                  <td>Tokyo</td>
-                  <td>63</td>
-                  <td>2011/07/25</td>
-                  <td>$170,750</td>
-                </tr>
+                <?php
+                  foreach ($area as $a) {
+                    echo "<tr>
+                        <td>$a->no_id</td>
+                        <td>$a->id_area</td>
+                        <td>$a->nama_area</td>
+                        <td>$a->alamat</td>
+                        <td>$a->status</td>
+                        <td>".anchor('area/edit/'.$a->no_id,'EDIT')." 
+                            ".anchor('area/hapus/'.$a->no_id,'HAPUS')."</td>
+                      </tr>";
+                    }
+                  ?>
               </tbody>
             </table>
           </div>

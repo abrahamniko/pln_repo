@@ -9,7 +9,7 @@
         <a class="nav-link" href="<?php echo site_url('dashboard')?>"><i class="fas fa-tachometer-alt"></i> Beranda</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo site_url('area')?>"><i class="fas fa-map-marked-alt"></i> Area</a>
+        <a class="nav-link" href="<?php echo site_url('area')?> "><i class="fas fa-map-marked-alt"></i> Area</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo site_url('rayon')?>"><i class="fas fa-map-marker-alt"></i> Rayon</a>

@@ -1,8 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Model_login extends CI_Model {
-
+class Model_user extends CI_Model {
 	function cek_user($user,$pass){
 		$this->db->select('username,password,jabatan');
 		$this->db->from('tb_user');
@@ -14,8 +13,10 @@ class Model_login extends CI_Model {
 
 		if($query->num_rows()==1){
 			return $query->result();
+			echo "Benar";
 		}else{
 			return false;
+			echo "Salah";
 		}	
 	}
 }
