@@ -1,14 +1,13 @@
     <div class="container">
       <!-- Example DataTables Card-->
       <div class="card mb-3">
-        <h5 class="card-header">Data Tabel Rayon</h5>
+        <h5 class="card-header">Data Tabel Bangunan</h5>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Area</th>
                   <th>ID</th>
                   <th>Nama</th>
                   <th>Alamat</th>
@@ -22,7 +21,6 @@
                   <td>System Architect</td>
                   <td>Edinburgh</td>
                   <td>61</td>
-                  <td>2011/04/25</td>
                   <td>
                     <!-- Button trigger modal -->
                     <a href="#" class="badge badge-success" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-check"></i> Aktif</a>
@@ -65,6 +63,7 @@
                         </div>
                       </div>
                     </div>
+
                   </td>
                   <td>
                     <button type="button" class="btn btn-success btn-sm"><i class="fas fa-pen"></i></button>

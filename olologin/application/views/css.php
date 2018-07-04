@@ -6,12 +6,12 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"> 
 
 <!-- anyar -->
-<link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.min.css">
-<!-- <link rel="stylesheet" href="<?php echo base_url()?>assets/css/sticky-footer.css"> -->
+<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css")?>">
+<link rel="stylesheet" href="<?php echo base_url("assets/css/all.css")?>">
 
-<script src="<?php echo base_url()?>assets/js/jquery-3.3.1.slim.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/popper.min.js"></script>
-<script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url("assets/js/jquery-3.3.1.slim.min.js")?>"></script>
+<script src="<?php echo base_url("assets/js/popper.min.js")?>"></script>
+<script src="<?php echo base_url("assets/js/bootstrap.min.js")?>"></script>
 
 <!-- table -->
 <link href="<?=base_url("assets/vendor/datatables/dataTables.bootstrap4.css")?>" rel="stylesheet">

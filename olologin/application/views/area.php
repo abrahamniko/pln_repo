@@ -45,8 +45,8 @@
 		
       </div>
 	  <div class="card-footer text-muted text-center">
-	   <button type="SUBMIT" class="btn btn-primary">Simpan</button>
-	   <button href="<?php echo site_url('area')?> type="button" class="btn btn-danger">Reset</button>
+	   <button type="submit" class="btn btn-primary">Simpan</button>
+	   <button href="<?php echo site_url('area')?>" type="submit" class="btn btn-danger">Reset</button>
 	  </div>
     </div>
     <?php echo form_close();?>

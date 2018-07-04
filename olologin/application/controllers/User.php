@@ -6,7 +6,7 @@ class User extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		if($this->session->userdata("akses")==false) {
+		if($this->session->userdata('akses')==false) {
             redirect('login');
         }
 	}
@@ -17,6 +17,7 @@ class User extends CI_Controller {
 		$this->load->view('css');
 		$this->load->view('header');
 		$this->load->view('user',$data);
+		$this->load->view('show_user');
 		$this->load->view('footer');
 	}
 

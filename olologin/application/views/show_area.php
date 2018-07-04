@@ -19,16 +19,64 @@
                 <?php
                   foreach ($area as $a) {
                     echo "<tr>
-                        <td>$a->no_id</td>
-                        <td>$a->id_area</td>
-                        <td>$a->nama_area</td>
-                        <td>$a->alamat</td>
-                        <td>$a->status</td>
-                        <td>".anchor('area/edit/'.$a->no_id,'EDIT')." 
-                            ".anchor('area/hapus/'.$a->no_id,'HAPUS')."</td>
-                      </tr>";
+                          <td>$a->no_id</td>
+                          <td>$a->id_area</td>
+                          <td>$a->nama_area</td>
+                          <td>$a->alamat</td>
+                          <td>$a->status</td>
+                          <td>".anchor('area/edit/'.$a->no_id,'EDIT')." 
+                              ".anchor('area/hapus/'.$a->no_id,'HAPUS')."</td>
+                        </tr>";
                     }
                   ?>
+                  <!-- <td> -->
+                    <!-- Button trigger modal -->
+                    <!-- <a href="#" class="badge badge-success" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-check"></i> Aktif</a> -->
+                    <!-- Modal -->
+                    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Status</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">Apakah anda yakin data area dinonaktifkan ?</div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-success"><i class="fas fa-check"></i> Yakin</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Tidak</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+
+                    <!-- Button trigger modal -->
+                  <!--   <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal1"><i class="fas fa-times"></i> Nonaktif</a> -->
+                    <!-- Modal -->
+                    <!-- <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Status</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">Apakah anda yakin data area diaktifkan ?</div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-success"><i class="fas fa-check"></i> Yakin</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Tidak</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-success btn-sm"><i class="fas fa-pen"></i></button>
+                    <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                  </td> -->
               </tbody>
             </table>
           </div>

@@ -4,7 +4,7 @@
 <body>
   <div class="container" style="margin-top: 20px;">
     <div class="card">
-      <h5 class="card-header">Form Gudang</h5>
+      <h5 class="card-header">Form Bangunan</h5>
       <div class="card-body">
         <form>
 		  <div class="form-row">

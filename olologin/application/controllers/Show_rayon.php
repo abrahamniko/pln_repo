@@ -5,7 +5,7 @@ class Show_rayon extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('Show_rayon');
+		$this->load->view('show_rayon');
 	}
 
 }
