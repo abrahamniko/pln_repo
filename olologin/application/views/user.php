@@ -1,88 +1,251 @@
-
-
 <head>
     <title><?= $title ?></title>
 </head>
 <body>
-  <div class="container" style="margin-top: 20px;">
+  <div class="" style="margin: -40px 70px 0 70px;">
     <div class="card">
-      <h5 class="card-header">Form User</h5>
+      <h5 class="card-header text-white bg-primary"><i class="fas fa-stream"></i> Form User</h5>
       <div class="card-body">
-        <form>
+        <?php
+      		if($this->session->userdata('aksi')==true) {
+         		echo form_open('user/edit_simpan');
+            	echo form_hidden('id_user',$id_user['id_user']);
+            	echo form_hidden('id_area',$id_area['id_area']);
+            }else{
+            	echo form_open('user/input_simpan');            	
+            } ?>
 		  <div class="form-row">
 		    <div class="form-group col-md-6">
-		      <label for="inputEmail4">Nama*</label>
-		      <input type="text" class="form-control" id="inputEmail4" placeholder="-"/>
+		      <label>Nama*</label>
+		      <?php 
+		      	if($this->session->userdata('aksi')==true) {
+		      		echo '<input type="text" class="form-control" name="nama" value="'.$id_user['nama'].'" placeholder="-" required>';
+		       	}else{
+		       		echo '<input type="text" class="form-control" name="nama" placeholder="-" required>';
+		       	} ?>
 		    </div>
 		    <div class="form-group col-md-6">
-		      <label for="inputPassword4">Email*</label>
-		      <input type="text" class="form-control" id="inputPassword4" placeholder="-"/>
+		      <label>Email*</label>
+		      <?php if($this->session->userdata('aksi')==true) {
+		      		echo '<input type="email" class="form-control" name="email" value="'.$id_user['email'].'" placeholder="-" required>';
+		       	}else{
+		       		echo '<input type="email" class="form-control" name="email" placeholder="-" required>';
+		       	} ?>
 		    </div>
 		  </div>
 		  <div class="form-group">
-		    <label for="inputAddress">Alamat*</label>
-		    <input type="text" class="form-control" id="inputAddress" placeholder="-"/>
+		    <label>Alamat*</label>
+		    <?php if($this->session->userdata('aksi')==true) {
+		      		echo '<input type="text" class="form-control" name="alamat" value="'.$id_user['alamat'].'" placeholder="-" required>';
+		       	}else{
+		       		echo '<input type="text" class="form-control" name="alamat" placeholder="-" required>';
+		       	} ?>
 		  </div>
 		  <div class="form-row">
 		    <div class="form-group col-md-6">
-		      <label for="inputEmail4">No HP*</label>
-		      <input type="text" class="form-control" id="inputEmail4" placeholder="-"/>
+		      <label>No HP*</label>
+		      <?php if($this->session->userdata('aksi')==true) {
+		      		echo '<input type="text" class="form-control" name="nohp" value="'.$id_user['nohp'].'" placeholder="-" required>';
+		       	}else{
+		       		echo '<input type="text" class="form-control" name="nohp" placeholder="-" required>';
+		       	} ?>
 		    </div>
 		    <div class="form-group col-md-6">
-			    <label for="exampleFormControlSelect1">Jenis Kelamin*</label >
-			    <select class="form-control" id="exampleFormControlSelect1">
-			      <option>-</option>
-			      <option>Laki-Laki</option>
-			      <option>Perempuan</option>
+			    <label>Jenis Kelamin*</label >
+			    <select class="form-control" name="jenkel">
+			    	<?php if($this->session->userdata('aksi')==true) {
+			      		echo "<option value=".$id_user['jenkel'].">".$id_user['jenkel']."</option>";
+		       		}else{ 
+		       			echo 
+		       			"<option value=''>-</option>
+		       			 <option value='Laki-Laki'>Laki-Laki</option>
+                    	 <option value='Perempuan'>Perempuan</option>";
+                    }?>
 			    </select>
 			  </div>
 		  </div>
 		  <div class="form-row">
 		    <div class="form-group col-md-6">
-		      <label for="inputEmail4">Username*</label>
-		      <input type="text" class="form-control" id="inputEmail4" placeholder="-"/>
+		      <label>Username*</label>
+		      	<?php if($this->session->userdata('aksi')==true) {
+		      		echo '<fieldset disabled><input type="text" id="disabledTextInput" class="form-control" name="username" value="'.$id_user['username'].'" placeholder="-" required></fieldset>';
+		       	}else{
+		       		echo '<input type="text" class="form-control" name="username" placeholder="-" required>';
+		       	}?>
 		    </div>
 		    <div class="form-group col-md-6">
-		      <label for="inputPassword4">Password*</label>
-		      <input type="password" class="form-control" id="inputPassword4" placeholder="-"/>
+		      <label>Password*</label>
+		       <?php if($this->session->userdata('aksi')==true) {
+		      		echo '<input type="password" class="form-control" name="password" placeholder="Masukan password baru" required/>';
+		       	}else{
+		       		echo '<input type="password" class="form-control" name="password" placeholder="-" required/>';
+		       	}?>
 		    </div>
 		  </div>
+
 		  <fieldset class="form-group">
-		      <label for="inputAddress">Level*</label>
+		      <label>Level*</label>
 		      <div class="col-md-12">
-		        <div class="form-check">
-		          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1">
-		          <label class="form-check-label" for="gridRadios1">
+		        <?php if($this->session->userdata('aksi')==true){
+		        	if($id_user['jabatan']== "area"){
+						
+		        		echo '
+		        		<div class="form-check">
+		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="area" checked>
+		          		<label class="form-check-label" for="gridRadios1">
+		            	User Area
+		          		</label>
+		        		</div>
+		        		<div class="form-check">
+			          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="distribusi">
+			          	<label class="form-check-label" for="gridRadios2">
+			            User KD
+			          	</label>
+			        	</div>
+			        	<div class="form-check">
+			          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="aset">
+			          	<label class="form-check-label" for="gridRadios3">
+			            Pengelola Aset KD
+			          	</label>
+			        	</div>
+			        	<div class="form-check">
+			          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="admin">
+			          	<label class="form-check-label" for="gridRadios4">
+			            Admin KD
+			          	</label>
+			        	</div>';
+		        		}elseif($id_user['jabatan']== "distribusi"){
+		        		echo'
+		        		<div class="form-check">
+		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="area">
+		          		<label class="form-check-label" for="gridRadios1">
+		            	User Area
+		          		</label>
+		        		</div>
+		        		<div class="form-check">
+		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="distribusi" checked>
+		          		<label class="form-check-label" for="gridRadios2">
+		            	User KD
+		          		</label>
+		        		</div>
+		        		<div class="form-check">
+			          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="aset">
+			          	<label class="form-check-label" for="gridRadios3">
+			            Pengelola Aset KD
+			          	</label>
+			        	</div>
+			        	<div class="form-check">
+			          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="admin">
+			          	<label class="form-check-label" for="gridRadios4">
+			            Admin KD
+			          	</label>
+			        	</div>';
+		        		}elseif($id_user['jabatan']== "aset"){
+		        		echo'
+		        		<div class="form-check">
+		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="area">
+		          		<label class="form-check-label" for="gridRadios1">
+		            	User Area
+		          		</label>
+		        		</div>
+		        		<div class="form-check">
+		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="distribusi">
+		          		<label class="form-check-label" for="gridRadios2">
+		            	User KD
+		          		</label>
+		        		</div>
+		        		<div class="form-check">
+		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="aset" checked>
+		          		<label class="form-check-label" for="gridRadios3">
+		            	Pengelola Aset KD
+		          		</label>
+		        		</div>
+		        		<div class="form-check">
+			          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="admin">
+			          	<label class="form-check-label" for="gridRadios4">
+			            Admin KD
+			          	</label>
+			        	</div>';
+		        		}elseif($id_user['jabatan']== "admin"){
+		        		echo'
+		        		<div class="form-check">
+		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="area">
+		          		<label class="form-check-label" for="gridRadios1">
+		            	User Area
+		          		</label>
+		        		</div>
+		        		<div class="form-check">
+		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="distribusi">
+		          		<label class="form-check-label" for="gridRadios2">
+		            	User KD
+		          		</label>
+		        		</div>
+		        		<div class="form-check">
+		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="aset">
+		          		<label class="form-check-label" for="gridRadios3">
+		            	Pengelola Aset KD
+		          		</label>
+		        		</div>
+		        		<div class="form-check">
+		          		<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="admin" checked>
+		          		<label class="form-check-label" for="gridRadios4">
+		            	Admin KD
+		          		</label>
+		        		</div>';
+		        		}
+		        }else{
+		        	echo'
+		        	<div class="form-check">
+		          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="area">
+		          	<label class="form-check-label" for="gridRadios1">
 		            User Area
-		          </label>
-		        </div>
-		        <div class="form-check">
-		          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="2">
-		          <label class="form-check-label" for="gridRadios2">
+		          	</label>
+		        	</div>
+		        	<div class="form-check">
+		          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="distribusi">
+		          	<label class="form-check-label" for="gridRadios2">
 		            User KD
-		          </label>
-		        </div>
-		        <div class="form-check">
-		          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="3">
-		          <label class="form-check-label" for="gridRadios3">
+		          	</label>
+		        	</div>
+		        	<div class="form-check">
+		          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="aset">
+		          	<label class="form-check-label" for="gridRadios3">
 		            Pengelola Aset KD
-		          </label>
-		        </div>
-		        <div class="form-check">
-		          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="4">
-		          <label class="form-check-label" for="gridRadios4">
+		          	</label>
+		        	</div>
+		        	<div class="form-check">
+		          	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="admin">
+		          	<label class="form-check-label" for="gridRadios4">
 		            Admin KD
-		          </label>
-		        </div>
+		          	</label>
+		        	</div>
+		        	';
+		        }?>
 		    </div> <br>
 		        <!-- output user area -->
-			    <div id="olo1" style="display:none">
-				  <div class="form-group">
-				    <label for="exampleFormControlSelect1">Area*  (Wajib pilih area untuk Level User Area)</label >
-				    <select class="form-control" id="exampleFormControlSelect1">
-				      <option>-</option>
-				      <option>Malang</option>
-				      <option>Surabaya</option>
+			    <div id="area" style="display:none">
+				  <div class="form-group">				    
+				      <?php 
+				      if($this->session->userdata('aksi')==true) {	
+			      			if(!$id_user['id_area'] == ''){ ?>
+			      			<script type="text/javascript">
+			      				$("#area").show();
+			      			</script><?php
+			      			}			      		
+			      		echo "<label>Area*  (Wajib pilih area untuk Level User Area) (Area yang dipilih sebelumnya : -".$id_area['nama_area']." )</label >
+				    	<select name='id_area' class='form-control'>
+		       			<option value=''>Pilih Area</option>";
+		       			foreach ($area as $a) {
+                    	echo '<option value='.$a->id_area.'>'.$a->nama_area.'</option>';}
+			      		//echo "<option value=".$no_id['id_area'].">".$id_area['nama_area']."</option>";
+		       			}else{ 
+		       			echo "
+		       			<label>Area*  (Wajib pilih area untuk Level User Area)</label >
+				    	<select name='id_area' class='form-control'>
+		       			<option value=''>Pilih Area</option>";
+		       			foreach ($area as $a) {
+                    	echo '<option value='.$a->id_area.'>'.$a->nama_area.'</option>';
+                    	}}?>
 				    </select>
 				  </div>
 				</div>
@@ -90,24 +253,21 @@
 				<script type="text/javascript">
 				$(function(){
 					$(":radio.form-check-input").click(function(){
-						$("#olo1").hide()
-						if($(this).val() == "1"){
-							$("#olo1").show();
+						$("#area").hide()
+						if($(this).val() =="area" ){
+							$("#area").show();
 						}else{
 							$("").show();
 						}
 					});
 				});
 				</script>
-		  </fieldset>
-		</form>
-		
+		  </fieldset>		
       </div>
 	  <div class="card-footer text-muted text-center">
 	   <button type="submit" class="btn btn-primary">Simpan</button>
-	   <button type="reset" class="btn btn-danger">Reset</button>
+	   <?php echo form_close();?>
 	  </div>
     </div>
   </div>
-  <br>
 </body>

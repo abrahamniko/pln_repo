@@ -8,7 +8,8 @@ class Area extends CI_Controller {
 		parent::__construct();
 		if ($this->session->userdata('akses')==false){
 			redirect('login');
-		}	
+		}
+		$this->load->model('Model_area','MA');	
 	}
 
 	public function index()
@@ -19,8 +20,7 @@ class Area extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('area',$data);
 
-		$this->load->model('Model_area');
-		$data['area'] = $this->Model_area->list_area()->result();
+		$data['area'] = $this->MA->list_area()->result();
 		$data['no_id'] = '';
 
 		$this->load->view('show_area',$data);
@@ -40,8 +40,7 @@ class Area extends CI_Controller {
 			'alamat'=>$this->input->post('alamat'));
 		$this->db->insert('tb_area', $data_area);
  
-		$this->load->model('Model_area');
-		$data['area'] = $this->Model_area->list_area()->result();
+		$data['area'] = $this->MA->list_area()->result();
 		$this->load->view('show_area',$data);
 		$this->load->view('footer');
 		redirect('area');
@@ -49,17 +48,15 @@ class Area extends CI_Controller {
 
 	public function edit(){
 		$this->session->set_userdata('aksi', true);
-		$this->load->model('Model_area');
 		$no_id = $this->uri->segment(3);
-		$data['no_id'] = $this->Model_area->get_area($no_id)->row_array(); 
+		$data['no_id'] = $this->MA->get_area($no_id)->row_array();
 		$data['title'] = 'Area Content';
 
 		$this->load->view('css');
 		$this->load->view('header');
 		$this->load->view('area',$data);
  
-		$this->load->model('Model_area');
-		$data['area'] = $this->Model_area->list_area()->result();
+		$data['area'] = $this->MA->list_area()->result();
 		$this->load->view('show_area',$data);
 		$this->load->view('footer');
 	}

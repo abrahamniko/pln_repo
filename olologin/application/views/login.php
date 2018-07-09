@@ -3,14 +3,10 @@
 <head>
     <title><?= $title ?></title>
     <style type="text/css" media="screen">
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
 /* BASIC */
 
 body {
-  background-color: #55C9F4;
   font-family: "Poppins", sans-serif;
-  height: 100vh;
 }
 
 a {
@@ -273,8 +269,8 @@ input[type=password]:placeholder {
 }
 </style>
 </head>
-<body class="text-center" style="background-image: url('<?=base_url("assets/images/bg.jpg")?>'); background-repeat:no-repeat; background-position: left top; background-attachment: fixed; background-position: center; background-size: cover; color: #000;">
-  <div class="wrapper fadeInDown">
+<body class="text-center" style="background-image: url('<?php echo base_url();?>/assets/images/bg.jpg'); background-repeat:no-repeat; background-position: left top; background-attachment: fixed; background-position: center; background-size: cover;">
+  <div class="wrapper fadeInDown" style="margin-top: -80px;">
     <div id="formContent"> <br><br>
 
       <!-- Icon -->
@@ -295,6 +291,15 @@ input[type=password]:placeholder {
         </div>
       </div>
     </div>    
-  </center>  
+  </center>
+
+<!-- <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      username atau password anda tidak sesuai
+    </div>
+  </div>
+</div> -->
+
 </body>
 </html>

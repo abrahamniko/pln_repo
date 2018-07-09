@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Model_user extends CI_Model {
+class Model_user extends CI_Model{
 	function cek_user($user,$pass){
 		$this->db->select('username,password,jabatan');
 		$this->db->from('tb_user');
@@ -13,10 +13,31 @@ class Model_user extends CI_Model {
 
 		if($query->num_rows()==1){
 			return $query->result();
-			echo "Benar";
 		}else{
 			return false;
-			echo "Salah";
 		}	
+	}
+
+	function list_user(){
+		$user = $this->db->get('tb_user');
+		return $user;
+	}
+
+	function get_user($id_user){ 
+		$user = $this->db->get_where('tb_user',array('id_user'=>$id_user));
+		return $user;
+	}
+
+	function cek_list_user($username,$password){
+		$this->db->select('*');
+		$this->db->from('tb_user');
+		$this->db->where('username',$username);
+		$this->db->or_where('password',$password);
+		$userdb = $this->db->get();
+		if($userdb->num_rows()>0){
+			return $userdb;
+		}else{
+			return false;
+		}
 	}
 }

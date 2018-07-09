@@ -1,8 +1,8 @@
-    <div class="container">
+    <div style="margin: 30px 70px 0 70px;">
       <!-- Example DataTables Card-->
       <div class="card mb-3">
-        <h5 class="card-header">Data Tabel Area</h5>
-        <div class="card-body">
+        <h5 class="card-header text-white bg-primary"><i class="fas fa-table"></i> Data Tabel Area</h5>
+        <div class="card-body ">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
@@ -17,16 +17,18 @@
               </thead>
               <tbody>
                 <?php
+                  $no=1;
                   foreach ($area as $a) {
                     echo "<tr>
-                          <td style='text-align: center;'>$a->no_id</td>
+                          <td style='text-align: center;'>$no</td>
                           <td>$a->id_area</td>
                           <td>$a->nama_area</td>
                           <td>$a->alamat</td>
                           <td style='text-align: center;'>$a->status</td>
-                          <td style='text-align: center;'>".anchor('area/edit/'.$a->no_id,'<button type="button" class="btn btn-success btn-sm"><i class="fas fa-pen"></i></button>')." 
-                              ".anchor('area/hapus/'.$a->no_id,'<button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>')."</td>
+                          <td style='text-align: center;'>".anchor('area/edit/'.$a->no_id,'<button type="button" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i></button>')." 
+                              ".anchor('area/hapus/'.$a->no_id,'<button type="button" class="btn btn-danger btn-sm"><i class="far fa-trash-alt"></i></button>')."</td>
                         </tr>";
+                        $no++;
                     }
                   ?>
 

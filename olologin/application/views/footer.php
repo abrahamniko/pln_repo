@@ -1,19 +1,4 @@
-<!-- <style type="text/css" media="screen">
-.footer-bottom {
-    min-height: 30px;
-    width: 100%;
-}
-.copyright {
-    line-height: 30px;
-    min-height: 30px;
-}
-
-
-/************************************************************
-*************************Footer******************************
-*************************************************************/
-</style> -->
-<br>
+<!-- <br>
 <center>
 <div class="footer-bottom bg-light ">
 	<div class="container">
@@ -22,4 +7,4 @@
 		</div>
 	</div>
 </div>
-</center>
+</center> -->

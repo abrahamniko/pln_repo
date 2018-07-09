@@ -27,6 +27,7 @@ class Login extends CI_Controller
 				$this->session->set_userdata('username', $row->username);
 				$this->session->set_userdata('level', $row->jabatan);
 				$this->session->set_userdata('area', $row->id_area);
+				$this->session->set_userdata('id_user', $row->id_user);
 				$this->session->set_userdata('akses',true);
 
 				if($this->session->userdata('level')=="admin"or"distribusi"or"area"or"aset"){
